@@ -53,6 +53,9 @@
                                         <state key="normal" title="+/-">
                                             <color key="titleColor" systemColor="labelColor"/>
                                         </state>
+                                        <connections>
+                                            <action selector="processSignChange:" destination="BYZ-38-t0r" eventType="touchUpInside" id="w43-KL-tvd"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zFv-xj-A0u">
                                         <rect key="frame" x="192.5" y="5" width="82.5" height="90"/>
@@ -69,6 +72,9 @@
                                         <state key="normal" title="C">
                                             <color key="titleColor" systemColor="labelColor"/>
                                         </state>
+                                        <connections>
+                                            <action selector="processClear:" destination="BYZ-38-t0r" eventType="touchUpInside" id="B3H-5g-Q2z"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="labelColor"/>
@@ -98,7 +104,7 @@
                                         <rect key="frame" x="285" y="5" width="82.5" height="90"/>
                                         <color key="backgroundColor" systemColor="systemOrangeColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="32"/>
-                                        <state key="normal" title="/">
+                                        <state key="normal" title="x">
                                             <color key="titleColor" systemColor="secondarySystemBackgroundColor"/>
                                         </state>
                                     </button>
@@ -163,7 +169,7 @@
                                         <rect key="frame" x="285" y="5" width="82.5" height="90"/>
                                         <color key="backgroundColor" systemColor="systemOrangeColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="32"/>
-                                        <state key="normal" title="/">
+                                        <state key="normal" title="-">
                                             <color key="titleColor" systemColor="secondarySystemBackgroundColor"/>
                                         </state>
                                     </button>
@@ -228,9 +234,12 @@
                                         <rect key="frame" x="285" y="5" width="82.5" height="90"/>
                                         <color key="backgroundColor" systemColor="systemOrangeColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="32"/>
-                                        <state key="normal" title="/">
+                                        <state key="normal" title="+">
                                             <color key="titleColor" systemColor="secondarySystemBackgroundColor"/>
                                         </state>
+                                        <connections>
+                                            <action selector="processOperation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Fbe-2l-bOI"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gEx-MU-6mF">
                                         <rect key="frame" x="100" y="5" width="82.5" height="90"/>
@@ -304,6 +313,9 @@
                                         <state key="normal" title=".">
                                             <color key="titleColor" systemColor="secondarySystemBackgroundColor"/>
                                         </state>
+                                        <connections>
+                                            <action selector="processDecimal:" destination="BYZ-38-t0r" eventType="touchUpInside" id="r7p-Sp-JpH"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RZa-5W-nYU">
                                         <rect key="frame" x="7.5" y="5" width="174.5" height="90"/>
