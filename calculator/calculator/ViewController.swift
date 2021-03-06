@@ -12,10 +12,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var displayLabel: UILabel!
     
     var current = ""
-    var leftOperator: Double?
-    var rightOperator: Double?
     var operation = ""
-    var result: Double?
+    var result: String?
+    var opString: String = ""
     
     var canTakeDecimal: Bool = true
     var numIsPositive: Bool = true
@@ -57,17 +56,22 @@ class ViewController: UIViewController {
     @IBAction func processOperation(_ sender: UIButton) {
         if let operationText = sender.titleLabel?.text {
             if operation.isEmpty {
-                operation = operationText
                 current = displayLabel.text ?? "0"
                 clearDisplayLabel = true
             } else {
-                
+                calculate()
+            }
+            if operationText == "x" {
+                operation = "*"
+            } else {
+                operation = operationText
             }
         }
     }
     
     @IBAction func processClear(_ sender: UIButton) {
         reset()
+        displayLabel.text = "0"
     }
     
     @IBAction func processSignChange(_ sender: UIButton) {
@@ -80,24 +84,27 @@ class ViewController: UIViewController {
         }
     }
     
-    func saveNums() {
-        if leftOperator == nil {
-            leftOperator = Double(current)
-        } else if (rightOperator == nil) {
-            rightOperator = Double(current)
-        }
+    @IBAction func processEquals(_ sender: Any) {
+        calculate()
+        reset()
+    }
+    
+    func calculate() {
+        opString = current + operation + displayLabel.text!
+        let expression = NSExpression(format: opString)
+        let suma = expression.expressionValue(with: nil, context: nil) as? NSNumber
+        displayLabel.text = suma?.stringValue
+        current = displayLabel.text!
+        clearDisplayLabel = true
     }
     
     func reset() {
-        displayLabel.text = "0"
         current = ""
-        leftOperator = nil
-        rightOperator = nil
         result = nil
         canTakeDecimal = true
         clearDisplayLabel = false
         clearOnEquals = false
+        opString = ""
+        operation = ""
     }
-    
 }
-
