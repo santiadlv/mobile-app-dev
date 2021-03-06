@@ -56,7 +56,12 @@ class ViewController: UIViewController {
     @IBAction func processOperation(_ sender: UIButton) {
         if let operationText = sender.titleLabel?.text {
             if operation.isEmpty {
-                current = displayLabel.text ?? "0"
+                if isDecimal(displayLabel.text!) {
+                    current = displayLabel.text ?? "0"
+                } else {
+                    current = displayLabel.text ?? "0"
+                    current.append(".0")
+                }
                 clearDisplayLabel = true
             } else {
                 calculate()
@@ -89,13 +94,33 @@ class ViewController: UIViewController {
         reset()
     }
     
+    @IBAction func processPercentage(_ sender: Any) {
+        if let number = displayLabel.text {
+            let percent = Double(number)!/100
+            displayLabel.text = String(percent)
+        }
+    }
+    
     func calculate() {
         opString = current + operation + displayLabel.text!
         let expression = NSExpression(format: opString)
         let suma = expression.expressionValue(with: nil, context: nil) as? NSNumber
         displayLabel.text = suma?.stringValue
-        current = displayLabel.text!
+        if isDecimal(displayLabel.text!) {
+            current = displayLabel.text ?? "0"
+        } else {
+            current = displayLabel.text ?? "0"
+            current.append(".0")
+        }
         clearDisplayLabel = true
+    }
+    
+    func isDecimal(_ str: String) -> Bool {
+        if floor(Double(str)!) == Double(str)! {
+            return false
+        } else {
+            return true
+        }
     }
     
     func reset() {
