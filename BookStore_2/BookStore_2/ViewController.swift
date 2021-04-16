@@ -22,8 +22,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     func loadBooks() -> [Book] {
         let fetchRequest: NSFetchRequest<Book> = Book.fetchRequest()
-        let titleSort: NSSortDescriptor = NSSortDescriptor(key: "title", ascending: true)
-        fetchRequest.sortDescriptors = [titleSort]
+        let idSort: NSSortDescriptor = NSSortDescriptor(key: "id", ascending: true)
+        fetchRequest.sortDescriptors = [idSort]
         var result: [Book] = []
         
         do {
@@ -38,7 +38,21 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 
     @IBAction func addNew(_ sender: UIBarButtonItem) {
         let book: Book = NSEntityDescription.insertNewObject(forEntityName: "Book", into: managedObjectContext) as! Book
-        book.title = "My Book" + String(loadBooks().count)
+        
+        let fetchRequest: NSFetchRequest<Book> = Book.fetchRequest()
+        let idSort: NSSortDescriptor = NSSortDescriptor(key: "id", ascending: false)
+        fetchRequest.sortDescriptors = [idSort]
+        fetchRequest.fetchLimit = 1
+        var result: [Book] = []
+        
+        do {
+            result = try managedObjectContext.fetch(fetchRequest)
+        } catch {
+            NSLog("My error: %@", error as NSError)
+        }
+        
+        book.id = Int32(result[0].id + 1)
+        book.title = "My Book " + String(book.id)
         
         do {
             try managedObjectContext.save()
