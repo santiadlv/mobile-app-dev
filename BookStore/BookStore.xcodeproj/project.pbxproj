@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CC38EDE3262FA68A00774B6F /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC38EDE2262FA68A00774B6F /* AddViewController.swift */; };
+		CC38EDE8262FADBC00774B6F /* BookStoreDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC38EDE7262FADBC00774B6F /* BookStoreDelegate.swift */; };
 		CC3ED6B625F30FA400D16A0A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3ED6B525F30FA400D16A0A /* AppDelegate.swift */; };
 		CC3ED6B825F30FA400D16A0A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3ED6B725F30FA400D16A0A /* SceneDelegate.swift */; };
 		CC3ED6BA25F30FA400D16A0A /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3ED6B925F30FA400D16A0A /* MasterViewController.swift */; };
@@ -19,6 +21,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CC38EDE2262FA68A00774B6F /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
+		CC38EDE7262FADBC00774B6F /* BookStoreDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookStoreDelegate.swift; sourceTree = "<group>"; };
 		CC3ED6B225F30FA400D16A0A /* BookStore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BookStore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC3ED6B525F30FA400D16A0A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CC3ED6B725F30FA400D16A0A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -72,6 +76,8 @@
 				CC3ED6D025F315BB00D16A0A /* DetailViewController.swift */,
 				CC3ED6CA25F30FC500D16A0A /* Book.swift */,
 				CC3ED6CD25F30FD800D16A0A /* BookStore.swift */,
+				CC38EDE2262FA68A00774B6F /* AddViewController.swift */,
+				CC38EDE7262FADBC00774B6F /* BookStoreDelegate.swift */,
 			);
 			path = BookStore;
 			sourceTree = "<group>";
@@ -148,8 +154,10 @@
 			files = (
 				CC3ED6CB25F30FC500D16A0A /* Book.swift in Sources */,
 				CC3ED6BA25F30FA400D16A0A /* MasterViewController.swift in Sources */,
+				CC38EDE3262FA68A00774B6F /* AddViewController.swift in Sources */,
 				CC3ED6B625F30FA400D16A0A /* AppDelegate.swift in Sources */,
 				CC3ED6D125F315BB00D16A0A /* DetailViewController.swift in Sources */,
+				CC38EDE8262FADBC00774B6F /* BookStoreDelegate.swift in Sources */,
 				CC3ED6CE25F30FD800D16A0A /* BookStore.swift in Sources */,
 				CC3ED6B825F30FA400D16A0A /* SceneDelegate.swift in Sources */,
 			);
@@ -300,6 +308,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = BookStore/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -318,6 +327,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = BookStore/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
