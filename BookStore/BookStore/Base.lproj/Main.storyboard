@@ -328,6 +328,7 @@
                     <connections>
                         <outlet property="authorText" destination="mat-zx-lEw" id="BmZ-Rt-Ewy"/>
                         <outlet property="descriptionText" destination="8ek-6n-3mX" id="mkf-xO-E4O"/>
+                        <outlet property="descriptionTextView" destination="DM5-F8-xFw" id="1qT-NE-jH5"/>
                         <outlet property="pagesText" destination="C33-ny-Jfs" id="yse-B8-HeR"/>
                         <outlet property="switchOutlet" destination="iEr-QY-9hW" id="JLV-QF-kvK"/>
                         <outlet property="titleText" destination="LZ0-GH-ifD" id="ROi-jd-ga8"/>
