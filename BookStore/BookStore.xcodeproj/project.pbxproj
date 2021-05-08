@@ -47,6 +47,51 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CC0FA1B826461D91007882CE /* storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				CC3ED6BB25F30FA400D16A0A /* Main.storyboard */,
+				CC3ED6C025F30FA600D16A0A /* LaunchScreen.storyboard */,
+			);
+			path = storyboard;
+			sourceTree = "<group>";
+		};
+		CC0FA1B926461DA0007882CE /* delegate */ = {
+			isa = PBXGroup;
+			children = (
+				CC3ED6B525F30FA400D16A0A /* AppDelegate.swift */,
+				CC3ED6B725F30FA400D16A0A /* SceneDelegate.swift */,
+				CC38EDE7262FADBC00774B6F /* BookStoreDelegate.swift */,
+			);
+			path = delegate;
+			sourceTree = "<group>";
+		};
+		CC0FA1BB26461DB9007882CE /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				CC3ED6B925F30FA400D16A0A /* MasterViewController.swift */,
+				CC3ED6D025F315BB00D16A0A /* DetailViewController.swift */,
+				CC38EDE2262FA68A00774B6F /* AddViewController.swift */,
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
+		CC0FA1BD26461DE3007882CE /* model */ = {
+			isa = PBXGroup;
+			children = (
+				CC3ED6CA25F30FC500D16A0A /* Book.swift */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		CC0FA1BF26461DF5007882CE /* util */ = {
+			isa = PBXGroup;
+			children = (
+				CC3ED6CD25F30FD800D16A0A /* BookStore.swift */,
+			);
+			path = util;
+			sourceTree = "<group>";
+		};
 		CC3ED6A925F30FA400D16A0A = {
 			isa = PBXGroup;
 			children = (
@@ -66,18 +111,13 @@
 		CC3ED6B425F30FA400D16A0A /* BookStore */ = {
 			isa = PBXGroup;
 			children = (
-				CC3ED6B525F30FA400D16A0A /* AppDelegate.swift */,
-				CC3ED6B725F30FA400D16A0A /* SceneDelegate.swift */,
-				CC3ED6BB25F30FA400D16A0A /* Main.storyboard */,
-				CC3ED6BE25F30FA600D16A0A /* Assets.xcassets */,
-				CC3ED6C025F30FA600D16A0A /* LaunchScreen.storyboard */,
+				CC0FA1B926461DA0007882CE /* delegate */,
+				CC0FA1B826461D91007882CE /* storyboard */,
+				CC0FA1BB26461DB9007882CE /* controller */,
+				CC0FA1BD26461DE3007882CE /* model */,
+				CC0FA1BF26461DF5007882CE /* util */,
 				CC3ED6C325F30FA600D16A0A /* Info.plist */,
-				CC3ED6B925F30FA400D16A0A /* MasterViewController.swift */,
-				CC3ED6D025F315BB00D16A0A /* DetailViewController.swift */,
-				CC3ED6CA25F30FC500D16A0A /* Book.swift */,
-				CC3ED6CD25F30FD800D16A0A /* BookStore.swift */,
-				CC38EDE2262FA68A00774B6F /* AddViewController.swift */,
-				CC38EDE7262FADBC00774B6F /* BookStoreDelegate.swift */,
+				CC3ED6BE25F30FA600D16A0A /* Assets.xcassets */,
 			);
 			path = BookStore;
 			sourceTree = "<group>";
